@@ -1,0 +1,58 @@
+<! Doctype html >
+<html>
+<head>
+<meta charset ="UTF-8"/>
+<title> Sales Tax </title>
+<link rel="stylesheet" href="salestax.css" />
+</head>
+<body>
+<img src="LOGO.png" alt="pic of logo" width="185" height="225" />
+<h1>Sales tax calculator</h1>
+<hr>
+<p> Welcome to the sales tax calculator. 
+    To begin, add the subtotal and the sales tax 
+    (as a percentage, not a decimal value). </p>
+<ul>
+   <li><label for="subtotal">Subtotal:</label></li>
+   <input type="text" id="subtotal" name="subtotal"><br><br>
+   <li><label for="salestax">Sales tax (as a percentage):</label></li>
+   <input type="text" id="salestax" name="salestax"><br><br>
+   <li><label for="tax">Total Tax:</label></li>
+   <input type="text" id="tax" name="tax" readonly><br><br>
+   <li><label for="total">Total:</label></li> 
+   <input type="text" id="total" name="total" readonly><br><br>
+</ul>
+<button onclick="salesTax()">Calculate</button>
+<button onclick="clearX()">Clear All</button><br><br>
+<a href="orderform.html">Click here to go back to the order form.</a>
+
+<script>
+function salesTax() {
+  let num1 = Number.parseFloat(document.getElementById("subtotal").value);
+  let num2 = Number.parseFloat(document.getElementById("salestax").value);
+  
+  if (isNaN(num1) || isNaN(num2))
+	{
+		alert("Invalid input. Please enter a number value.");
+                document.getElementById("subtotal").value = " ";
+                document.getElementById("salestax").value = " ";
+                document.getElementById("tax").value = " ";
+                document.getElementById("total").value = " ";
+} else {
+  let tax = num2 / 100;
+  let totalTax = (num1 * tax).toFixed(4);
+  let total = (num1 + (num1 * tax)).toFixed(2);
+  document.getElementById("total").value = total;
+  document.getElementById("tax").value = totalTax;
+}
+}
+
+function clearX() {
+                document.getElementById("subtotal").value = " ";
+                document.getElementById("salestax").value = " ";
+                document.getElementById("tax").value = " ";
+                document.getElementById("total").value = " ";
+}
+</script>
+</body>
+</html>

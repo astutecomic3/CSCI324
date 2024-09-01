@@ -1,0 +1,21 @@
+/* remove the bullets from an unordered list. */
+
+ul {
+	list-style-type: none;
+}
+
+/* align the text and add a background color. */
+
+body {
+	text-align: center;
+	background-color: OldLace;
+}
+
+
+/* styling for the logo */
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
