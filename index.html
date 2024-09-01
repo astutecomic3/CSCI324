@@ -1,0 +1,67 @@
+<!--- This is general header syntax to begin the page -->
+<! Doctype html >
+<html>
+	<head>
+		<meta charset ="UTF-8"/>
+		<title>Order form</title>
+		<link rel="stylesheet" href="orderform.css"/>
+	</head>
+
+	<img src="LOGO.png" alt="pic of logo" width="185" height="225"/>
+
+<!--- Header -->
+<h1>Bedford International</h1>
+<hr>
+<!--- Main section of the page -->
+<body>
+<p>Welcome to Bedford International.
+   We provide a variety of solutions for industry professionals around the globe!</p>
+
+<h2>Order form</h2>
+
+<p>To get started please fill in the appropriate information below:</p>
+
+<form>
+    <ul>
+     <li><label for="fname">First name:</label></li>
+	<input type="text" id="fname" name="fname" maxlength="20"><br><br>
+	
+     <li><label for="lname">Last name:</label></li>
+  	<input type="text" id="lname" name="lname" maxlength="20"><br><br>
+
+     <li><label for="email">Email address:</label></li>
+	<input type="email" id="emadress" name="emadress"><br><br>
+
+     <li><label for="phone">Phone number:</label></li>
+	<input type="tel" id="phone" name="phone"><br><br>
+
+     <li><label for="company">Company name (if applicable):</label></li>
+	<input type="text" id="company" name="company" maxlength="20"><br><br>
+
+     <li><label for="position">Position</label></li>
+	<input type="text" id="position" name="position" maxlength="20"><br><br>
+
+     <li><label for="zip">ZIP code:</label></li>
+	<input type="text" id="zip" name="zip" maxlength="5"><br><br>
+
+ </ul>
+    <p>Please select your gender:</p>
+	<ol>
+		<li><input type="radio" name="gender" value="male" checked>Male</li>
+		<li><input type="radio" name="gender" value="female">Female</li>
+		<li><input type="radio" name="gender" value="prefer">Prefer not to say</li>
+	</ol>
+    <label for="indus">Industry of work</label>
+	<select name="indus" id="indus">
+			<option value ="Finance">Finance</option>
+			<option value="Defense">Defense</option>
+			<option value="IT/Cyber">IT/Cyber</option>
+			<option value="Education">Education</option>
+			<option value="Other/Not listed">Other/Not listed</option>
+        </select>
+  	<input type="submit" value="Submit">
+	<input type="reset" value="Start over"/>
+</form>
+<a href="salestax.html">Click here to go to the sales tax form.</a>
+</body>
+</html>
