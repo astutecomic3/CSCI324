@@ -30,7 +30,7 @@
   	<input type="text" id="lname" name="lname" maxlength="20"><br><br>
 
      <li><label for="email">Email address:</label></li>
-	<input type="email" id="emadress" name="emadress"><br><br>
+	<input type="email" id="email" name="email"><br><br>
 
      <li><label for="phone">Phone number:</label></li>
 	<input type="tel" id="phone" name="phone"><br><br>
@@ -43,8 +43,29 @@
 
      <li><label for="zip">ZIP code:</label></li>
 	<input type="text" id="zip" name="zip" maxlength="5"><br><br>
-
  </ul>
+
+ <label for="product">Product: </label>
+	<select name="product" id="product">
+			<option value ="BI-7100">BI-7100 ($499.99)</option>
+			<option value="BI-3900">BI-3900 ($239.99)</option>
+			<option value="BI-1250">BI-1250 ($139.99)</option>
+			<option value="BI-900">BI-900 ($99.99)</option>
+        </select>
+
+<br>
+<br>
+
+<label for="qty">Quantity:</label></li>
+	<input type="number" id="qty" name="qty" min="1" max="10"><br><br>
+
+<label for="warranty">Warranty: </label>
+	<select name="warranty" id="warranty">
+			<option value="No">No</option>
+			<option value ="Yes">Yes</option>
+        </select><br>
+
+
     <p>Please select your gender:</p>
 	<ol>
 		<li><input type="radio" name="gender" value="male" checked>Male</li>
